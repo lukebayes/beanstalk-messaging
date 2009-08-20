@@ -14,9 +14,11 @@ h2. Using the Beanstalk::QueueManager
 Use the Beanstalk::QueueManager class to access your queues by name, using the 
 Beanstalk::QueueManager#queue method. For example:
 
+<pre><code>
   queue_manager = BeanStalk::QueueManager.new("beanstalk-config.yml")
   my_queue = queue_manager.queue(:my_queue)
   my_queue << "Here's a message"
+</code></pre>
 
 In your +environment.rb+ file, you should create a single instance of a Beanstalk::QueueManager 
 using your +beanstalk.yml+ config as a global constant that you can use throughout your app. This 
